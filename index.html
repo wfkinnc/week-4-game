@@ -5,10 +5,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 <style>
   .crystal-image{
@@ -21,6 +21,11 @@
     font-size: 25px;
     text-align: center;0
   }
+
+  ./*jumbotron{
+
+    background-color: green;
+  }*/
 
 </style> 
 <script src="https://code.jquery.com/jquery.js"></script>
@@ -75,9 +80,9 @@ function setUpGame(numberOfPLays){
     //assigns random # of each gem
     for (var x = 0; x < 4; x++){
 
-      randomNumberGem = generateRandomNum(1,12);
       //assigns randomNumber of the Gem
       $( ".crystal-image" ).each( function( index, element ){
+      randomNumberGem = generateRandomNum(1,12);
           $( this ).attr("data-random",randomNumberGem );
             console.log(x + " " + randomNumberGem)
       }); // end .each 
